@@ -1,6 +1,6 @@
 # 🎨 HTGNick
 
-**HTGNick** to plugin do Minecraft (Spigot/Paper), który dodaje system **kolorowych nicków**, **weryfikacji graczy (✔ / ✖)** oraz **proste API** do integracji z innymi pluginami (np. HTGChat).
+**HTGNick** to plugin do Minecraft (Spigot/Paper), który dodaje system **kolorowych nicków**, **weryfikacji graczy (✔ / ✖)** oraz **proste API** do integracji z innymi pluginami (np. HTGChat).  
 Plugin działa **bez PlaceholderAPI**, ale oferuje **opcjonalne placeholdery**, jeśli PlaceholderAPI jest zainstalowane.
 
 ---
@@ -50,3 +50,44 @@ settings:
 
 verified: {}
 colors: {}
+```
+
+---
+
+## ⌨️ Komendy
+
+| Komenda | Opis |
+|------|------|
+| `/nick` | Otwiera GUI wyboru koloru nicku |
+| `/zweryfikowany` | Wyświetla informację o statusie weryfikacji |
+
+---
+
+## 🧩 PlaceholderAPI (opcjonalnie)
+
+| Placeholder | Opis |
+|-----------|-----|
+| `%htgnick_name%` | Kolorowy nick gracza |
+| `%htgnick_color%` | Surowy kolor nicku |
+| `%htgnick_verified%` | Status weryfikacji |
+| `%htgnick_verified_tab%` | Prefix do TAB |
+| `%htgnick_verified_tag%` | Prefix do chatu |
+
+---
+
+## 🔌 NickAPI
+
+HTGNick udostępnia proste API do komunikacji między pluginami.
+
+---
+
+## 🗺️ Roadmapa
+
+- Integracja z HTGChat
+- Rozszerzenie systemu weryfikacji
+- Dodatkowe style nicków
+
+---
+
+## 📜 Licencja
+Projekt publiczno/niepubliczny / HTGMC
