@@ -1,0 +1,6 @@
+pl/htgmc/htgnick/cmd/VerifiedInfoCommand.class
+pl/htgmc/htgnick/papi/HTGNickExpansion.class
+pl/htgmc/htgnick/cmd/NickCommand.class
+pl/htgmc/htgnick/gui/NickColorGUI.class
+pl/htgmc/htgnick/store/NickStore.class
+pl/htgmc/htgnick/HTGNick.class

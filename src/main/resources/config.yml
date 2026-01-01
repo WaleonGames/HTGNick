@@ -1,0 +1,22 @@
+# HTGNick - config.yml
+# Kolory i verifi są zapisywane automatycznie po użyciu GUI / komendy verify.
+
+# (opcjonalnie) ustawienia ogólne - jak będziesz chciał rozbudować
+settings:
+  # czy plugin ma ustawiać playerListName (TAB) na kolorowy nick
+  apply-tab: true
+  # czy plugin ma ustawiać displayName (chat/wyświetlanie) na kolorowy nick
+  apply-displayname: true
+
+# Verifi per gracz (UUID) - domyślnie false jeśli brak wpisu
+verified: {}
+# przykład:
+# verified:
+#   "00000000-0000-0000-0000-000000000000": true
+
+# Kolor per gracz (UUID) - "" lub brak wpisu = brak koloru
+colors: {}
+# przykład:
+# colors:
+#   "00000000-0000-0000-0000-000000000000": "&a"
+#   "11111111-1111-1111-1111-111111111111": "#55FFFF"

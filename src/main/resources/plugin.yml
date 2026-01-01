@@ -1,0 +1,23 @@
+name: HTGNick
+version: '0.0.0'
+main: pl.htgmc.htgnick.HTGNick
+api-version: '1.21'
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  nick:
+    description: Ustaw kolor nicku / verifi
+    usage: /nick <gui|verify>
+    permission: htgnick.use
+  zweryfikowany:
+    description: Informacje o statusie zweryfikowany
+    usage: /zweryfikowany
+    aliases: [verified, weryfikacja]
+
+permissions:
+  htgnick.use:
+    default: true
+
+  htgnick.verify.manage:
+    default: op
