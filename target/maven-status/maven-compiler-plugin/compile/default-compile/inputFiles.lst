@@ -1,4 +1,5 @@
 /home/kacper/Dokumenty/HTGNick/src/main/java/pl/htgmc/htgnick/HTGNick.java
+/home/kacper/Dokumenty/HTGNick/src/main/java/pl/htgmc/htgnick/api/NickAPI.java
 /home/kacper/Dokumenty/HTGNick/src/main/java/pl/htgmc/htgnick/cmd/NickCommand.java
 /home/kacper/Dokumenty/HTGNick/src/main/java/pl/htgmc/htgnick/cmd/VerifiedInfoCommand.java
 /home/kacper/Dokumenty/HTGNick/src/main/java/pl/htgmc/htgnick/gui/NickColorGUI.java

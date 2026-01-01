@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import pl.htgmc.htgnick.api.NickAPI;
 import pl.htgmc.htgnick.cmd.VerifiedInfoCommand;
 import pl.htgmc.htgnick.gui.NickColorGUI;
 import pl.htgmc.htgnick.papi.HTGNickExpansion;
@@ -14,6 +15,9 @@ public final class HTGNick extends JavaPlugin {
     private NickStore store;
     private NickColorGUI gui;
 
+    // ✅ API do użycia przez inne pluginy (np. HTGChat)
+    private NickAPI api;
+
     private boolean placeholderApiPresent;
 
     @Override
@@ -22,6 +26,9 @@ public final class HTGNick extends JavaPlugin {
 
         this.store = new NickStore(this);
         this.gui = new NickColorGUI(this);
+
+        // ✅ inicjalizacja API (styl jak HTGRODOAPI)
+        this.api = new NickAPI(this.store);
 
         // komenda + tab
         var cmd = getCommand("nick");
@@ -54,6 +61,11 @@ public final class HTGNick extends JavaPlugin {
         Bukkit.getOnlinePlayers().forEach(this::applyTabName);
     }
 
+    @Override
+    public void onDisable() {
+        // jakbyś kiedyś chciał: store.saveAll();
+    }
+
     private boolean isPlaceholderApiEnabled() {
         Plugin papi = Bukkit.getPluginManager().getPlugin("PlaceholderAPI");
         return papi != null && papi.isEnabled();
@@ -67,12 +79,19 @@ public final class HTGNick extends JavaPlugin {
         return store;
     }
 
+    /** ✅ HTGChat i inne pluginy będą brały to API */
+    public NickAPI getApi() {
+        return api;
+    }
+
     public void openGui(Player p) {
         gui.open(p);
     }
 
     public void applyTabName(Player p) {
         String colored = store.getColoredName(p);
+
+        // TAB + display
         p.setPlayerListName(colored);
         p.setDisplayName(colored);
     }
