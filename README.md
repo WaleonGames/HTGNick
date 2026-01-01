@@ -90,4 +90,4 @@ HTGNick udostępnia proste API do komunikacji między pluginami.
 ---
 
 ## 📜 Licencja
-Projekt prywatny / HTGMC
+Projekt publiczno/niepubliczny / HTGMC
